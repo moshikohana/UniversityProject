@@ -6,21 +6,21 @@ var mysql = require('mysql');
 var async = require('async');
 var arrays = require('async-arrays');
 
-
+// I Deleted the sql details .
 var pool  = mysql.createPool({
     connectionLimit : 10,
-    host:'us-cdbr-iron-east-01.cleardb.net',
-    user:'b7de285e80db9d',
-    password: '85145859d84bf44',
-    database:'heroku_1d0cef252e5061a',
+    host:'',
+    user:'',
+    password: '',
+    database: '',
     multipleStatements: true
 });
 
-pool.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-    if (error) throw error;
-    console.log('The solution is: ', results[0].solution);
+// pool.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+//     if (error) throw error;
+//     console.log('The solution is: ', results[0].solution);
     
-});
+// });
 
 
 
