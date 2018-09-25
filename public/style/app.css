@@ -1,0 +1,286 @@
+#footer {
+    position:relative;
+    left:0px;
+    top:0px;
+    height:40px;
+    width:100%;
+    background-color: lightblue;
+    border-radius: 5px;
+    color: black;
+
+    }
+
+input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+
+#regContainer {
+    background-image: url("../media/registerBg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    height: 1000px;
+    width: 100%;
+    opacity: 0.66;
+
+}
+
+#regContainer:hover {
+    opacity: 1.0;
+}
+
+#regForm {
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.50);
+
+}
+
+#logForm {
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.50);
+
+}
+
+#logContainer {
+    background-image: url("../media/loginBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 100%;
+    opacity: 0.66;
+}
+
+#logContainer:hover {
+    opacity: 1.0;
+}
+
+#universityContainer {
+    background-image: url("../media/universityBg.gif");
+    background-size: cover;
+    height: 100%;
+
+}
+
+#adminContainer {
+    background-image: url("../media/administratorBG.jpg");
+    background-size: cover;
+    height: 100%;
+
+}
+
+.image-head {
+    background-image:url("../media/admin0.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 33%;
+    float: left;
+    margin: 0px;
+}
+
+.image-head-admin {
+    background-image:url("../media/university0.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 33%;
+    float: left;
+    margin: 0px;
+}
+
+#universityMainContainer{
+    /*background-color: lightgrey;*/
+    box-shadow: 10px 10px 10px black;
+    height: 300px;
+    width: 66%;
+    float: right;
+    margin: 0px;
+}
+
+#adminMainContainer{
+
+/*    box-shadow: 10px 10px 10px black;*/
+    height: 300px;
+    width: 66%;
+    float: right;
+    margin: 0px;
+}
+
+#adminListContainer {
+    width: 90%;
+    height: 66%;
+    float: left;
+    margin: 0px;
+}
+
+#coursesContainer {
+    width: 45%;
+    height: 66%;
+    float: left;
+    margin: 0px;
+}
+
+#studentsContainer {
+    width: 45%;
+    height: 66%;
+    float: right;
+    margin: 0px;
+}
+
+.universityForm {
+    background-image: url("../media/universityBg.gif");
+    color: white;
+    height: 30px;
+}
+
+.adminForm {
+    background-image: url("../media/administratorBG.jpg");
+    color: white;
+    height: 30px;
+}
+
+.registerForm {
+    background-color: lightblue;
+    color: black;
+    height: 30px;
+}
+
+#courseDirective {
+    height: 125px;
+    margin-bottom: 33px;
+    background-image: url("../media/courseDirectiveBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+
+}
+
+#courseDirective:hover {
+    opacity: 1.0;
+}
+
+#studentDirective {
+    margin-bottom: 33px;
+    height: 125px;
+    background-image: url("../media/studentDirectiveBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+}
+
+#studentDirective:hover {
+    opacity: 1.0;
+}
+
+#adminDirective {
+    margin-bottom: 33px;
+    height: 125px;
+    background-image: url("../media/adminDirectiveBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+
+}
+
+#adminDirective:hover {
+    opacity: 1.0;
+}
+
+#courseImg{
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 66px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#studentImg {
+     height: 100px;
+     width: 100px;
+     float: left;
+     margin-right: 66px;
+     margin-left: 20px;
+     margin-top: 10px;
+ }
+
+#adminImg {
+     height: 100px;
+     width: 100px;
+     float: left;
+     margin-right: 66px;
+     margin-left: 20px;
+     margin-top: 10px;
+ }
+#editForm {
+    background-image: url("../media/editedFormBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 14px;
+
+}
+
+#editStudentForm {
+     background-image: url("../media/editedFormBG.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     font-size: 14px;
+    position: relative;
+
+ }
+
+#editAdminForm{
+    background-image: url("../media/editedAdminFormBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 14px;
+}
+#pencil {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 66px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#studentsInTheEditBox{
+    float: right;
+    width: 66px;
+    height: 50px;
+}
+
+#coursesInTheEditBox{
+    float: right;
+    width: 85px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+<div id="courseDirective" ng-click="viewCourse({id:id})">
+
+            <img id="courseImg" ng-src="{{courseImg}}">
+            <h4> {{courseName}} </h4>
+            <h4>Description: {{courseDesc}}</h4>
+            <h4 ng-if="universityHide">Number Of students: {{numberOfStudents}}</h4>
+
+            <button class="btn btn-primary" ng-click="editCourse({id:id})" ng-if="salesState">Edit</button>
+
+
+</div>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApplication">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/app.css">
+    <title>Stanford University</title>
+    <link rel="icon" href="media/favicon.png" type="image" sizes="16x16">
+
+</head>
+<body>
+<img src="media/logo.png" alt="logo" style="width:200px;height:50px; float: left" />
+<ul class="nav nav-pills">
+    <li role="presentation" title="Back to my website"><a href="https://moshiko-ohana.herokuapp.com/#/intro"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+    <li role="presentation" title="To see this content, you first need to Reg & Log"><a ui-sref="University"><span class="glyphicon glyphicon-education"></span>  University</a></li>
+    <li role="presentation" title="To see this content, you first need to Reg & Log"><a ui-sref="Administration"><span class="glyphicon glyphicon-king"></span>  Administration</a></li>
+    <li role="presentation" title="After registration you will able to logIn"><a ui-sref="Registration"><span class="glyphicon glyphicon-user"></span>  Register</a></li>
+    <li role="presentation" title="Log in section, first register to continue"><a ui-sref="Login"><span class="glyphicon glyphicon-log-in"></span>  Log In</a></li>
+    <li role="presentation" title="Log out, but remember to save your work" ng-click="logOutBTN()"><a><span class="glyphicon glyphicon-log-out"></span>  Log Out</a></li>
+    <li role="presentation" title="To see this content, you first need to Reg & Log"><a ui-sref="About"><span class="glyphicon glyphicon-info-sign"></span>  About</a></li>
+    <li ng-if="loggedIn" role="presentation" title="This is you. Yea, I know, not so pretty :)" style="float:right;"><img ng-src="{{user.userImg}}" style="width: 66px; height: 66px; padding-right: 15px;"/><span style="padding-right: 15px;"><b>{{user.userName}}, {{user.role}}</b></span></li>
+
+</ul>
+
+<ui-view></ui-view>
+
+<div style="clear:both;"></div>
+</br>
+<div id="footer"><center><strong>Created By Nir Saado & Moshiko Ohana 2017 (C)</strong></center></div>
+
+<!--Angular scripts -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>
+<!--application scripts -->
+<script src="clientApp.js"></script>
+
+<script src="Controllers/RegistrationCtrl.js"></script>
+<script src="Controllers/LoginCtrl.js"></script>
+<script src="Controllers/AboutCtrl.js"></script>
+<script src="Controllers/UniversityCtrl.js"></script>
+<script src="Controllers/AdministrationCtrl.js"></script>
+<script src="Controllers/CoursesCtrl.js"></script>
+<script src="Controllers/StudentsCtrl.js"></script>
+<script src="Controllers/AdminCtrl.js"></script>
+
+
+<script src="Services/loginService.js"></script>
+<script src="Services/registerService.js"></script>
+<script src="Services/universityService.js"></script>
+<script src="Services/administrationService.js"></script>
+<script src="Services/studentService.js"></script>
+<script src="Services/adminService.js"></script>
+<script src="Services/courseService.js"></script>
+
+<script src="Directives/courseItem.js"></script>
+<script src="Directives/studentItem.js"></script>
+<script src="Directives/adminItem.js"></script>
+
+</body>
+</html>

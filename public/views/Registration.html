@@ -1,0 +1,97 @@
+</br>
+</br>
+
+<div id="registrationStandBy"></div>
+<div id="registrationSuccess"></div>
+<div id="registrationNotSuccess"></div>
+
+</br>
+
+<div id="regContainer">
+    <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addUserModal"><span class="glyphicon glyphicon-plus"></span> Add User</button></center>
+</div>
+
+<div class="modal fade" id="addUserModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header; registerForm">
+                <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+                <center><h3 class="modal-title">Add User</h3></center>
+            </div>
+            <div class="modal-body">
+                <form name="addUserForm">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input name="userName" ng-model="user.userName" type="text" class="form-control" placeholder="User Name" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input name="userPassword" ng-model="user.userPassword" type="password" class="form-control" placeholder="User Password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input name="userEmail" ng-model="user.userEmail" type="email" class="form-control" placeholder="shubby@dubby.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user.userImg">User Image URL</label>
+                        <textarea class="form-control" ng-model="user.userImg" id="user.userImg" rows="1" placeholder="http://"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile3">Or Upload From Machine</label>
+                        <input type="file" class="form-control-file" id="exampleInputFile3" aria-describedby="fileHelp">
+                        <small id="fileHelp3" class="form-text text-muted">Please do not upload a large file</small>
+                    </div>
+
+                    <center><div class="form-check" style="color: black; font-size: 16px">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" ng-model="user.userRole" value="sale" ng-click="getVal()" required>
+                            Sale
+                        </label>
+                    </div>
+                        <div class="form-check" style="color: black; font-size: 16px">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" ng-model="user.userRole" value="administrator" ng-click="getVal()" required>
+                                Administrator
+                            </label>
+                        </div>
+                        <div class="form-check disabled" style="color: black; font-size: 16px">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="owner" disabled>
+                                Owner
+                            </label></center>
+
+                    <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary" ng-disabled="addUserForm.$invalid" ng-click="saveUserBTN()" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-save"></span> Save User</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-danger" ng-disabled="addUserForm.$invalid" ng-click="deleteUserBTN()"><span class="glyphicon glyphicon-trash"></span> Delete User</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer; registerForm">
+                <center><button type="button" class="btn btn-danger" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"> Close</button></center>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

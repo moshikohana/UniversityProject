@@ -1,0 +1,10 @@
+<div id="studentDirective" ng-click="viewStudent({id:id})">
+
+        <img id="studentImg" ng-src="{{userImg}}">
+        <h4> {{userName}} </h4>
+        <h4>Email: {{userEmail}}</h4>
+
+        <button class="btn btn-primary" ng-click="editStudent({id:id});isEditPressed=true">Edit</button>
+
+
+</div>

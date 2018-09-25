@@ -1,0 +1,19 @@
+<student-item  ng-repeat="user in clientArrayStudentsMainContainer track by $index" id="user.userId" user-name="user.userName"
+               user-email="user.userEmail" user-img="user.userImg" edit-student="editStudent(id)"></student-item>
+<div ng-mouseleave="myVar=false">
+<form ng-if="myVar"  id="editStudentForm">
+    <img src="./media/pencil.png" id="pencil">
+
+    <div ng-repeat="course in clientArrayCoursesUniversity" id="coursesInTheEditBox">
+        <input type="checkbox" ng-model="objectForValueOfCheckBox[course.id]" ng-false-value="undefined" value={{course.id}}/><b>{{course.courseName}}</b>
+    </div></br>
+    Student Name: <textarea rows="1" placeholder="Enter Edited Name" ng-model="user.userName">{{user.userName}}</textarea></br>n
+    Student Email: <textarea rows="1" placeholder="Enter Edited Email" ng-model="user.userEmail">{{user.userEmail}}</textarea></br>
+    Student Image: <textarea rows="1" placeholder="Enter Edited Image"ng-model="user.userImg">{{user.userImg}}</textarea></br>
+    <button type="submit" class="btn btn-primary" data-dismiss="form" ng-click="saveEditedStudentBTN()"><span class="glyphicon glyphicon-floppy-save"></span> Save Student </button>
+    <button type="submit" class="btn btn-danger"  data-dismiss="form" ng-click="confirmDelete()"><span class="glyphicon glyphicon-trash"></span> Delete Student </button>
+
+</form>
+    <div id="deleteStudentCanceled"></div>
+
+</div>

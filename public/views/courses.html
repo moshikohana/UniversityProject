@@ -1,0 +1,25 @@
+<course-item  ng-repeat="course in clientArrayCoursesMainContainer track by $index" id="course.id" course-name="course.courseName"
+              course-desc="course.courseDesc" course-img="course.courseImg" number-of-students="course.numberOfStudents" edit-course="editCourse(id)" sales-state="salesState" university-hide="universityHide" course-students="course.courseStudents"></course-item>
+
+<div ng-mouseleave="myVar=false" title="You must save your changes before leaving this form">
+<form ng-if="myVar" id="editForm">
+    <img src="../media/pencil.png" id="pencil">
+
+    <div ng-repeat="student in course.drawStudentsArray" id="studentsInTheEditBox"><img ng-src="{{student.userImg}}" style="width: 25px; height: 25px;"/></br><b>{{student.userName}}</b></div>
+
+    Course Name: <textarea rows="1" placeholder="Enter Edited Name" ng-model="course.courseName">{{course.courseName}}</textarea></br>
+    Course Desc: <textarea rows="1" placeholder="Enter Edited Desc" ng-model="course.courseDesc">{{course.courseDesc}}</textarea></br>
+    Course Image: <textarea rows="1" placeholder="Enter Edited Image" ng-model="course.courseImg">{{course.courseImg}}</textarea></br>
+
+    <button type="submit" class="btn btn-primary" data-dismiss="form" ng-click="saveEditedCourseBTN()"><span class="glyphicon glyphicon-floppy-save"></span> Save Edited Course</button>
+    <button ng-if="ifThereAreStudents" type="submit" class="btn btn-danger"  data-dismiss="form" ng-click="confirmDelete()"><span class="glyphicon glyphicon-trash"></span> Delete Course</button>
+
+</form>
+    <div id="deleteCourseCanceled"></div>
+</div>
+
+
+
+
+
+

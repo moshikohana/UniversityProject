@@ -1,0 +1,19 @@
+<admin-item ng-repeat="user in clientArrayAdministrationMainContainer track by $index" id="user.userId" user-name="user.userName"
+            user-email="user.userEmail" user-img="user.userImg" edit-admin="editAdmin(id)"></admin-item>
+<div ng-mouseleave="myVar=false">
+<form ng-if="myVar" id="editAdminForm">
+    <img src="../media/pencil.png" id="pencil">
+    Admin Name: <textarea rows="1" placeholder="Enter Edited Name" ng-model="user.userName">{{user.userName}}</textarea></br>
+    Admin Email: <textarea rows="1" placeholder="Enter Edited Email" ng-model="user.userEmail">{{user.userEmail}}</textarea></br>
+    Admin Image: <textarea rows="1" placeholder="Enter New Image"ng-model="user.userImg">{{user.userImg}}}</textarea></br>
+    <div ng-if="isOwner">
+        Role: <textarea rows="1" placeholder="Enter Edited Role" ng-model="user.userRole">{{user.userRole}}</textarea> You can change the Role only to "sale"</br>
+    </div>
+    <button type="submit" class="btn btn-primary" data-dismiss="form" ng-click="saveEditedUserBTN()"><span class="glyphicon glyphicon-floppy-save"></span> Save Admin</button>
+    <button ng-if="isCurrentUser" data-confirm="Are you sure to delete this item?" type="submit" class="btn btn-danger"  data-dismiss="form" ng-click="confirmDelete()"><span class="glyphicon glyphicon-trash"></span> Delete Admin</button>
+</form>
+    <div id="deleteAdminCanceled"></div>
+</div>
+
+
+

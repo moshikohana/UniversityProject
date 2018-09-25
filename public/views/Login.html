@@ -1,0 +1,44 @@
+</br>
+</br>
+
+<div id="OrangeAlert"></div>
+<div id="GreenAlert"></div>
+<div id="RedAlert"></div>
+<div id="logOutAlert"></div>
+
+</br>
+
+<div id="logContainer">
+
+</br>
+
+<div class="container">
+  <form name="myForm" id="logForm">
+
+    <div class="form-group row">
+      <label class="col-sm-4 col-form-label" style="color: white"></label>
+      <div class="col-sm-5">
+        <input name="userName" ng-model="user.userName" type="text" class="form-control" placeholder="User Name" required autofocus title="Type 'Steve' to login as a Administer">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-4 col-form-label" style="color: white"></label>
+      <div class="col-sm-5">
+        <input name="password" ng-model="user.userPassword" type="password" class="form-control" id="inputPassword3" placeholder="Password" required title="Type '1' as the password of Steve">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <center><button type="submit" class="btn btn-primary" ng-disabled="myForm.$invalid" ng-click="logInBTN()">Log In</button></center>
+    </div>
+   </form>
+</div>
+</div>
+
+
+
+
+
+
+

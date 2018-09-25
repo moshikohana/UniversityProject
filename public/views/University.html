@@ -1,0 +1,204 @@
+</br>
+</br>
+
+
+<div id="universityContainer">
+
+    <div id="image-head" class="image-head">
+        <div class="centering-hack"></div>
+    </div>
+
+    <div id="universityMainContainer">
+
+        <ui-view></ui-view>
+
+    </div>
+    <div style="clear:both;"></div>
+
+    </br>
+    </br>
+
+    <div id="standByAddingAlert"></div>
+    <div id="addingSuccessAlert"></div>
+    <div id="addingFailAlert"></div>
+
+    </br>
+
+</div>
+
+</br>
+
+    <div id="coursesContainer">
+
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCourseModal"><span class="glyphicon glyphicon-plus"></span> Add Course</button>
+        <h2><u>Courses</u></h2>
+
+    </br>
+
+        <course-item ng-repeat="course in clientArrayCoursesUniversity track by $index" id="course.id" course-name="course.courseName"
+                          course-desc="course.courseDesc" course-img="course.courseImg" number-of-students="course.numberOfStudents" course-students="course.courseStudents" view-course="viewCourse(id)" sales-state="salesState" university-hide="universityHide"></course-item>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addCourseModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header; universityForm">
+                        <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+                        <center><h3 class="modal-title">Add Course</h3></center>
+                    </div>
+                    <div class="modal-body">
+                        <form name="addCourseForm">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input name="courseName" ng-model="course.courseName" type="text" class="form-control" placeholder="Course Name" required autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleTextarea">Description</label>
+                                <textarea ng-model="course.courseDesc" class="form-control" id="exampleTextarea" rows="3" placeholder="Write Something About The Course" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputImageURL">Image URL</label>
+                                <textarea ng-model="course.courseImg" class="form-control" id="inputImageURL" rows="1" placeholder="http://"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputFile">Or Upload From Machine</label>
+                                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                <small id="fileHelp" class="form-text text-muted">Please do not upload a large file</small>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="offset-sm-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-disabled="addCourseForm.$invalid" data-dismiss="modal" ng-click="saveCourseBTN()"><span class="glyphicon glyphicon-floppy-save"></span> Save Course</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer; universityForm">
+                        <center><button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"> Close</button></center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="studentsContainer">
+
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStudentModal"><span class="glyphicon glyphicon-plus"></span> Add Student</button>
+        <h2><u>Students</u></h2>
+
+        </br>
+
+        <student-item  ng-repeat="user in clientArrayStudentsUniversity track by $index" id="user.id" user-name="user.userName"
+                       user-email="user.userEmail" user-img="user.userImg" view-student="viewStudent(id)"></student-item>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addStudentModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header; universityForm">
+                        <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+                        <center><h3 class="modal-title">Add Student</h3></center>
+                    </div>
+                    <div class="modal-body">
+                        <form name="addStudentForm">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input name="studentName" ng-model="user.userName" type="text" class="form-control" placeholder="Student Name" required autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input name="userPassword" ng-model="user.userPassword" type="password" class="form-control" placeholder="User Password" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input name="studentEmail" ng-model="user.userEmail" type="email" class="form-control" placeholder="shubby@dubby.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user.userImg">Student Image URL</label>
+                                <textarea class="form-control" ng-model="user.userImg" id="user.userImg" rows="1" placeholder="http://"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputFile2">Or Upload From Machine</label>
+                                <input type="file" class="form-control-file" id="exampleInputFile2" aria-describedby="fileHelp">
+                                <small id="fileHelp2" class="form-text text-muted">Please do not upload a large file</small>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-form-label">Courses</label>
+                                <div style="clear:both;"></div>
+
+                                </br>
+                                <div ng-repeat="course in clientArrayCoursesUniversity">
+                                    <input type="checkbox" ng-checked="course.check" ng-model="objectForValueOfCheckBox[course.id]" value={{course.id}}/>{{course.courseName}}
+                                </div>
+                                <!--<ul>
+                                    <li ng-repeat="course in clientArrayCoursesUniversity">
+                                        &lt;!&ndash;<input type="checkbox" checklist-mode="user.courses" checklist-value="{{course}}">{{course.courseName}}<br>&ndash;&gt;
+                                        <input type="checkbox" ng-checked="course.check" ng-mode="objectOfValueOfEachCheckbox[course.courseId]" value="{{courseId}}">{{course.courseName}}<br>
+                                    </li>
+                                </ul>-->
+
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="offset-sm-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-disabled="addStudentForm.$invalid" data-dismiss="modal" ng-click="saveStudentBTN()"><span class="glyphicon glyphicon-floppy-save"></span> Save Student</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer; universityForm">
+                        <center><button type="button" class="btn btn-danger" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"> Close</button></center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
